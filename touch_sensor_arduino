@@ -1,0 +1,22 @@
+const int pinButton = 3;                        // pin of button define here
+const int pinLed    = 7;                        // pin of led define here
+
+void setup()
+{
+    pinMode(pinButton, INPUT);                  // set button INPUT
+    pinMode(pinLed, OUTPUT);                    // set led OUTPUT
+}
+
+void loop()
+{
+    if(digitalRead(pinButton))                     // when button is pressed
+    {
+        digitalWrite(pinLed, HIGH);             // led on
+    }
+    else
+    {
+        digitalWrite(pinLed, LOW);
+    }
+    
+    delay(10);
+}
